@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dcr-autoelectrics
+    env: node
+    buildCommand: |
+      npm install --include=dev
+      npm install --prefix client --include=dev
+      npm install --prefix server
+      npm run build
+    startCommand: npm start --prefix server
+    envVars:
+      - key: NODE_ENV
+        value: production
