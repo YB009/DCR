@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Section from './ui/Section'
+import StarRating from './ui/StarRating'
 import { testimonials } from '../data/content'
 
 export default function Testimonials(){
@@ -14,7 +15,10 @@ export default function Testimonials(){
         {testimonials.map((t, i) => (
           <motion.figure key={i} initial={{opacity:0, y:20}} whileInView={{opacity:1,y:0}} transition={{delay:i*0.05}}
             className="glass rounded-2xl p-6">
-            <blockquote className="text-slate-200">“{t.quote}”</blockquote>
+            <div className="mb-3">
+              <StarRating />
+            </div>
+            <blockquote className="text-slate-200">"{t.quote}"</blockquote>
             <figcaption className="mt-4 text-sm text-slate-400">— {t.name}</figcaption>
           </motion.figure>
         ))}

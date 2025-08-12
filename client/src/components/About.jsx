@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Section from './ui/Section'
+import StarRating from './ui/StarRating'
 
 export default function About(){
   return (
@@ -31,8 +32,11 @@ export default function About(){
               <div className="flex h-full w-full flex-col items-center justify-center text-center">
                 <p className="text-5xl font-black text-white/90">12k+</p>
                 <p className="text-slate-300">Vehicles diagnosed & repaired</p>
-                <div className="mt-6 flex gap-6 text-sm text-slate-300">
-                  <p>⭐️⭐️⭐️⭐️⭐️ Rated</p>
+                <div className="mt-6 flex gap-6 text-sm text-slate-300 items-center">
+                  <div className="flex items-center gap-2">
+                    <StarRating />
+                    <span>Rated</span>
+                  </div>
                   <p>Same‑day Callouts</p>
                   <p>Fully Insured</p>
                 </div>

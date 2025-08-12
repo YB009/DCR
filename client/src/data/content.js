@@ -42,15 +42,19 @@ export const services = [
 
 export const testimonials = [
   {
-    name: 'Lewis R.',
-    quote: 'Turned up the same day and found a wiring fault my garage missed. Professional and tidy job.'
+    name: 'Daniel Dorey',
+    quote: 'Had a wiring issue that was causing an engine light in my car, turned out to be a simple fix, had my car in and out the garage within 20 minutes and was charged a very reasonable price. Highly recommend'
   },
   {
-    name: 'Amira K.',
-    quote: 'Reset an airbag light and fitted a new battery on‑site. Great price and top service!'
+    name: 'Brad James',
+    quote: 'Got recommended to sort out a problem with the ignition and electrical fault I was having with my Ford Focus. Problem was diagnosed within minutes and booked in same day for a repair. Fantastic service, honest, hard working owner. Highly recommended. Thank you'
   },
   {
-    name: 'Callum D.',
-    quote: 'Booked diagnostics for my EV—clear explanation and fixed within the hour.'
+    name: 'Thomas Wright',
+    quote: 'Great service. Managed to fix my Astra rear light cluster on the same day. Would highly recommend.'
+  },
+  {
+    name: 'Kels',
+    quote: 'Absolutely cracking guy. Very very well versed on diagnostics, software and systems including component coding/recycling. Also a nice guy with affordable pricing. Glad I found the place and would definitely recommend'
   }
 ]
