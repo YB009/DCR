@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Button from './ui/Button'
+import Logo from './Logo'
 import { nav } from '../data/content'
 
 export default function Navbar(){
@@ -8,14 +9,8 @@ export default function Navbar(){
   return (
     <div className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-slate-900/50 border-b border-white/10">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-3 group">
-          <div className="h-9 w-9 rounded-xl bg-brand-500/20 ring-1 ring-brand-500/50 grid place-items-center">
-            <span className="font-black text-brand-300">D</span>
-          </div>
-          <div>
-            <p className="font-display text-lg font-extrabold leading-none">DCR Auto Electrics</p>
-            <p className="text-xs text-slate-400 leading-none mt-1">Newcastle upon Tyne</p>
-          </div>
+        <a href="#top">
+          <Logo />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {nav.map(i => (
@@ -23,7 +18,7 @@ export default function Navbar(){
               {i.label}
             </a>
           ))}
-          <Button href="#contact" className="text-sm">Get a Quote</Button>
+          <Button href="#contact" className="text-sm">Contact Us</Button>
         </div>
         <button className="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Open menu" onClick={()=>setOpen(true)}>
           <Menu className="h-6 w-6" />
@@ -42,7 +37,7 @@ export default function Navbar(){
               {nav.map(i => (
                 <a key={i.id} href={`#${i.id}`} className="text-base" onClick={()=>setOpen(false)}>{i.label}</a>
               ))}
-              <Button href="#contact" onClick={()=>setOpen(false)}>Get a Quote</Button>
+              <Button href="#contact" onClick={()=>setOpen(false)}>Contact Us</Button>
             </div>
           </div>
         </div>

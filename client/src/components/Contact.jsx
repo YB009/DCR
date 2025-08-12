@@ -26,7 +26,7 @@ export default function Contact(){
   }
 
   return (
-    <Section id="contact" eyebrow="Get in touch" title="Book a diagnostic or request a quote" subtitle="Tell us a little about the issue and your vehicle. We\'ll reply with availability and next steps.">
+    <Section id="contact" eyebrow="Get in touch" title="Book Our Service" subtitle="Tell us a little about the issue and your vehicle. We\'ll reply with availability and next steps.">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <motion.form onSubmit={onSubmit} initial={{opacity:0, x:-20}} whileInView={{opacity:1, x:0}} viewport={{ once: true }} className="glass rounded-2xl p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -16,14 +16,14 @@ export default function Hero(){
             Trusted mobile auto electricians — Since 2009
           </p>
           <h1 className="mt-6 font-display text-5xl/tight sm:text-6xl/tight md:text-7xl/tight font-extrabold">
-            Expert Auto Electrics
+            DCR Auto Electrics
             <br className="hidden sm:block"/> in Newcastle & the North East
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-300">
             Diagnostics, wiring repairs, batteries, alternators, starters, retrofits and EV electrical support — delivered with precision and care.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="#contact">Book diagnostics</Button>
+            <Button href="#contact">Book Our Service</Button>
             <a className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10" href="tel:+441912345678">
               Call 0191 123 45678
             </a>
