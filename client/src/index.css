@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base aesthetics */
+:root { --ring: 0 0% 100%; }
+
+body {
+  @apply antialiased font-sans bg-slate-950 text-slate-100 selection:bg-brand-500/30 selection:text-white;
+  background-image: theme('backgroundImage.radial-fade');
+}
+
+/**** Fancy card / glass utilities ****/
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-glow;
+}
+
+.section-edge {
+  background: radial-gradient(60% 50% at 50% 0%, rgba(59,130,246,.25), rgba(2,6,23,0));
+}
+
+.btn-gradient {
+  @apply relative inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+}
+.btn-gradient:before {
+  content: '';
+  position: absolute; inset: -2px; border-radius: 14px; padding: 2px;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6, #a78bfa);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.btn-gradient span { @apply relative; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
