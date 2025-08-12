@@ -76,7 +76,7 @@ export default function Contact(){
           <Map />
           <div className="glass rounded-2xl p-6 text-slate-300">
             <p className="text-white font-semibold">DCR Auto Electrics</p>
-            <p>Newcastle upon Tyne · North East, UK</p>
+            <p>UK</p>
             <p className="mt-2">Mon–Fri 8:30–17:30 · Sat by appointment</p>
             <p className="mt-2">Phone: <a className="underline" href="tel:+441912345678">0191 123 45678</a></p>
             <p>Email: <a className="underline" href="mailto:info@dcr-autoelectrics.co.uk">info@dcr-autoelectrics.co.uk</a></p>

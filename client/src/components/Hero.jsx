@@ -17,7 +17,6 @@ export default function Hero(){
           </p>
           <h1 className="mt-6 font-display text-5xl/tight sm:text-6xl/tight md:text-7xl/tight font-extrabold">
             DCR Auto Electrics
-            <br className="hidden sm:block"/> in Newcastle & the North East
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-300">
             Diagnostics, wiring repairs, batteries, alternators, starters, retrofits and EV electrical support — delivered with precision and care.

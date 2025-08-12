@@ -7,7 +7,6 @@ export default function Logo({ className = "" }) {
       </div>
       <div>
         <p className="font-display text-lg font-extrabold leading-none">DCR Auto Electrics</p>
-        <p className="text-xs text-slate-400 leading-none mt-1">Newcastle upon Tyne</p>
       </div>
     </div>
   )

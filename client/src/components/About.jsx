@@ -16,7 +16,7 @@ export default function About(){
             {[
               'IMI‑qualified technicians with EV awareness',
               'Dealer‑level scan tools and programming where supported',
-              'Mobile callouts across Newcastle & surrounding areas',
+              'Mobile callouts across the region',
               'Up‑front quotes and no‑surprise invoices'
             ].map((line) => (
               <li key={line} className="flex gap-3">
