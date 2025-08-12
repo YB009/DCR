@@ -1,21 +1,24 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-export NODE_VERSION=20
-echo "Using Node.js version: $NODE_VERSION"
+echo "Using Node.js version: $(node -v)"
 
-echo "Installing root dependencies..."
-npm install --include=dev
+# Clean stale installs (avoids weird perms)
+rm -rf client/node_modules server/node_modules || true
 
-echo "Installing client dependencies..."
-npm install --prefix client --include=dev
+echo "Installing root deps (incl. dev)…"
+npm ci --include=dev
 
-echo "Installing server dependencies..."
-npm install --prefix server
+echo "Installing client deps (incl. dev)…"
+npm ci --prefix client --include=dev
 
-echo "Building client..."
-cd client
-npm run build
-cd ..
+echo "Installing server deps…"
+npm ci --prefix server
 
-echo "Build completed successfully!"
+# Safety: ensure local bin scripts are executable (covers edge cases)
+chmod +x client/node_modules/.bin/* || true
+
+echo "Building client…"
+npm run build --prefix client
+
+echo "✅ Client built"
