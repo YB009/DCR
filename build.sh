@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+export NODE_VERSION=20
+echo "Using Node.js version: $NODE_VERSION"
+
 echo "Installing root dependencies..."
 npm install --include=dev
 
