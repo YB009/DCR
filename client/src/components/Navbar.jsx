@@ -26,18 +26,22 @@ export default function Navbar(){
       </nav>
       {/* Mobile sheet */}
       {open && (
-        <div className="md:hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm" onClick={()=>setOpen(false)}>
-          <div className="absolute right-3 top-3">
-            <button className="p-2 rounded-lg bg-white/10" onClick={()=>setOpen(false)} aria-label="Close menu">
-              <X className="h-6 w-6" />
+        <div className="md:hidden fixed inset-0 z-[9999] bg-slate-950/95 backdrop-blur-sm" onClick={()=>setOpen(false)}>
+          <div className="absolute right-4 top-4 z-10">
+            <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors" onClick={()=>setOpen(false)} aria-label="Close menu">
+              <X className="h-6 w-6 text-white" />
             </button>
           </div>
-          <div className="glass absolute inset-x-4 top-20 rounded-2xl p-6">
-            <div className="flex flex-col gap-4">
-              {nav.map(i => (
-                <a key={i.id} href={`#${i.id}`} className="text-base" onClick={()=>setOpen(false)}>{i.label}</a>
-              ))}
-              <Button href="#contact" onClick={()=>setOpen(false)}>Contact Us</Button>
+          <div className="flex items-center justify-center min-h-screen px-6">
+            <div className="glass rounded-2xl p-8 w-full max-w-sm">
+              <div className="flex flex-col gap-6">
+                {nav.map(i => (
+                  <a key={i.id} href={`#${i.id}`} className="text-lg font-medium text-white hover:text-brand-300 transition-colors" onClick={()=>setOpen(false)}>{i.label}</a>
+                ))}
+                <div className="pt-4">
+                  <Button href="#contact" onClick={()=>setOpen(false)} className="w-full justify-center">Contact Us</Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
